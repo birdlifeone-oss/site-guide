@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.wrapper{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #eff2f7;
+    gap: 100px;
+    opacity: 0;
+    animation: wrapperscaleAnime 3s forwards; 
+}
+
+@keyframes wrapperscaleAnime{
+
+0%{opacity: 0;} 
+20%{opacity: 0.05;}
+30%{opacity: 0.1;}
+100%{opacity: 1;}
+
+}
+
+.bgimage{
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+section{
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 100px;
+}
+
+.fadeLeft{
+  opacity: 0;
+  animation: fadeLeftAnime 2.5s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeLeftAnime{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeOnly{
+ opacity: 0;
+  transform: translateY(50px);
+  animation: fadeOnlyAnime 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeOnlyAnime{
+  0%{
+    opacity: 0;
+    transform: scale(0.5);
+    
+
+  }
+  100%{
+    opacity: 1;
+     transform: scale(1);
+  }
+}
+
+.fadeTopTrigger{
+
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.fadeTop{
+ 
+  animation: fadeTopAnime 1.5s forwards;
+}
+
+@keyframes fadeTopAnime{
+  0%{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:600px){
+
+.bgimage{
+  display: none;
+}
+
+}
