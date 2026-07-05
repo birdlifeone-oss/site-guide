@@ -10,6 +10,8 @@
     gap: 100px;
     opacity: 0;
     animation: wrapperscaleAnime 3s forwards; 
+    animation-delay: 0.5s;
+  
 }
 
 @keyframes wrapperscaleAnime{
@@ -46,6 +48,18 @@ section{
     flex-direction: column;
     padding: 50px;
     gap: 100px;
+}
+
+.button{
+  background-color: #005581;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  margin: 50px 0;
+  padding: 10px;
+  text-align: center;
+ 
 }
 
 .fadeLeft{
@@ -105,6 +119,20 @@ section{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+footer{
+  background-color: #5b6d90;
+  width: 100%;
+  padding: 30px;
+
+}
+
+small{
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: auto;
 }
 
 @media(max-width:600px){
