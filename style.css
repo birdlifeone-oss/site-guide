@@ -48,15 +48,17 @@ body{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    animation: mainAnime 2s forwards;
+    animation: mainAnime 2.5s forwards;
     animation-delay: 2s;
 }
 
 @keyframes mainAnime{
     0%{
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(300px);
   }
+
+  20%{opacity: 0;}
   100%{
     opacity: 1;
     transform: translateY(0);
@@ -85,18 +87,18 @@ animation-delay: 2s;
 
 .topFaderight{
 opacity: 0;
-animation: topFadeAnime 2s forwards;
-animation-delay: 2s;
+animation: topFadeAnime 2.5s forwards;
+animation-delay: 3.5s;
 }
 
 @keyframes topFadeAnime{
   0%{
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(200px) translateY(100px);
   }
   100%{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -197,14 +199,22 @@ small{
   margin: auto;
 }
 
-@media(max-width:600px){
+@media(max-width:1024px){
 
 .bgimage{
   display: none;
 }
 
 .wrapper{
-  background-color: green;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.body_wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: #4a7765;
+  opacity: 0;
+  animation: wrapperscaleAnime 3s forwards; 
 }
 
 }
